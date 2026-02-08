@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UniCrop | Smart Agriculture</title>
+  <style>
+    :root{
+      --green:#2e7d32;
+      --light:#f4fff4;
+      --dark:#1b1b1b;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, Helvetica, sans-serif}
+    body{color:var(--dark);background:#fff;line-height:1.6}
+
+    /* Header */
+    header{
+      background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+      url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80') center/cover;
+      height:100vh;
+      color:#fff;
+    }
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+    }
+    nav h1{font-size:28px;letter-spacing:1px}
+    nav ul{list-style:none;display:flex;gap:25px}
+    nav a{color:#fff;text-decoration:none;font-weight:600}
+    nav a:hover{text-decoration:underline}
+
+    .hero{
+      height:80%;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+    }
+    .hero-content{max-width:600px}
+    .hero h2{font-size:48px;margin-bottom:15px}
+    .hero p{font-size:18px;margin-bottom:25px}
+    .btn{
+      display:inline-block;
+      background:var(--green);
+      color:#fff;
+      padding:12px 28px;
+      border-radius:30px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .btn:hover{opacity:.9}
+
+    /* Sections */
+    section{padding:80px 8%}
+    .section-title{text-align:center;margin-bottom:50px}
+    .section-title h3{font-size:32px;color:var(--green)}
+
+    /* About */
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+    .about img{width:100%;border-radius:12px}
+
+    /* Services */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+    .service-card{
+      background:var(--light);
+      padding:30px 20px;
+      border-radius:15px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,.08);
+    }
+    .service-card h4{margin:15px 0;color:var(--green)}
+
+    /* Contact */
+    .contact{
+      background:var(--light);
+      border-radius:20px;
+      padding:50px;
+      max-width:700px;
+      margin:auto;
+    }
+    .contact form{display:grid;gap:15px}
+    .contact input,.contact textarea{
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:15px;
+    }
+    .contact button{
+      background:var(--green);
+      color:#fff;
+      border:none;
+      padding:14px;
+      border-radius:25px;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    /* Footer */
+    footer{
+      background:#0f2a13;
+      color:#fff;
+      text-align:center;
+      padding:25px;
+      margin-top:60px;
+    }
+
+    /* Responsive */
+    @media(max-width:900px){
+      .hero h2{font-size:36px}
+      .about{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header id="home">
+    <nav>
+      <h1>UniCrop</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-content">
+        <h2>Smart Farming for a Better Tomorrow</h2>
+        <p>UniCrop helps farmers grow better crops using modern agricultural solutions and sustainable practices.</p>
+        <a href="#services" class="btn">Explore Services</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="section-title">
+      <h3>About UniCrop</h3>
+    </div>
+    <div class="about">
+      <div>
+        <p>
+          UniCrop is an agriculture-focused platform designed to support farmers
+          with modern crop management, soil analysis, and sustainable farming techniques.
+          Our mission is to increase productivity while protecting the environment.
+        </p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=900&q=80" alt="Farming">
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="section-title">
+      <h3>Our Services</h3>
+    </div>
+    <div class="services">
+      <div class="service-card">
+        <h4>Crop Monitoring</h4>
+        <p>Track crop health and growth using smart tools.</p>
+      </div>
+      <div class="service-card">
+        <h4>Soil Analysis</h4>
+        <p>Understand soil nutrients to improve yield.</p>
+      </div>
+      <div class="service-card">
+        <h4>Weather Insights</h4>
+        <p>Plan farming activities with accurate forecasts.</p>
+      </div>
+      <div class="service-card">
+        <h4>Expert Support</h4>
+        <p>Get guidance from agriculture professionals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">
+      <h3>Contact Us</h3>
+    </div>
+    <div class="contact">
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 UniCrop. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
